@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>background-clip</title>
+    <style>
+       /* 과제: 너비 7M, 높이 7M, 배경 노랑 사각형 4개를 만들어라.*/  
+       /* selector 하나를 정의한다. */
+       div {
+            background-color: yellow;
+            width: 7rem;
+            height: 7rem;
+            margin: 1rem;
+            border: .5rem dotted;
+       }
+
+       #one {
+            background-clip: border-box; /* clip: background 를 잘라내겠다*/
+       }
+
+       #two {
+           background-clip: padding-box;
+       }
+
+       #three {
+            background-clip: content-box;
+       }
+       /* padding margin border 값을 지정하지 않으면 객체의 크기는 content box의 크기이다 */
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id='one'></div>
+    <div id='two'></div>
+    <div id='three'></div>
+</body>
+</html>
